@@ -18,8 +18,11 @@ printf "\n"
 
 echo "Ta ditt valg:"
 meny
+
+#Kjører programmet helt til brukeren velger 9.
 while [[ "$i" != 9 ]]
 do
+	#Utifra brukerens valg, utfører operasjon.
 	case $i in
 		1) echo "Jeg er $(whoami) og dette scriptet heter $(basename "$0")";;
 		2) echo "Tid siden siste boot: $(uptime | awk '{print $1}')";;
